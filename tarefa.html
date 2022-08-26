@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>Aula</title>
+    <link rel="stylesheet" type="text/css" href="aula.css">
+    
+    <meta charset="UTF-8">
+</head>
+<body>
+    <fieldset id=cadastro>
+        <legend>Efetuar registro</legend>
+        <div id=nomedata>
+            <div>
+                <label>Nome:</label><br>
+                <input type="text" id="nome"/>
+            </div>
+            <diV id=data>
+                <label>Data nascimento:</label><br>
+                <input type="date" id="dataNascimento" />
+            </div>
+        </div>
+        <div>
+            <label>Email:</label><br>
+            <input type="email" id="email"/>
+        </div>
+        <div>
+            <label>Senha:</label><br>
+            <input type="password" id="senha" />
+        </div>
+        <div>
+            <label>Sexo:</label><br>
+            <select id='sexo' name='sexo'>
+                <option>Outros</option>
+                <option >Feminino</option>
+                <option selected>Masculino</option>
+             </select>
+        </div>
+        <div>
+            <label>Telefone Residencial:</label><br>
+            <input type="tel" id="telefoneResidencial" />
+        </div>
+        <div>
+            <label>Celular:</label><br>
+            <input type="tel" id="celular" />
+        </div>
+        <div>
+            <label>Fumante:</label><br>
+            <select id='sexo' name='fumante'>
+                <option >Não</option>
+                <option selected>Sim</option>
+             </select>
+        </div>
+        <div>
+            <label>Municipio de origen:</label><br>
+            <input type="text" id="municipio" />
+        </div>
+        <div>
+            <button type="button" id=cancelar>Cadastrar</button>
+            <button type="button">Cancelar</button>
+        </div>
+    </fieldset>
+
+
+
+
+
+
+
+    <fieldset id=dados>
+        <legend>Dados</legend>
+        
+        <div id=nomedata>
+            <div id=nome>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" disabled/>
+            </div>
+            <diV id=data>
+                <label for="dataNascimento">Data nascimento:</label><br>
+                <input type="date" id="dataNascimento" disabled/>
+            </div>
+        </div>
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" disabled/>
+        </div>
+        <div>
+            <label for="senha">Senha:</label><br>
+            <input type="password" id="senha" disabled/>
+        </div>
+        <div>
+            <label for="sexo">Sexo:</label><br>
+            <select id='sexo' name='sexo' disabled>
+                <option>Outros</option>
+                <option >Feminino</option>
+                <option selected>Masculino</option>
+             </select>
+        </div>
+        <div>
+            <label for="telefoneResidencial">Telefone Residencial:</label><br>
+            <input type="tel" id="telefoneResidencial" disabled/>
+        </div>
+        <div>
+            <label for="celular">Celular:</label><br>
+            <input type="tel" id="celular" disabled/>
+        </div>
+        <div>
+            <label for="fumante">Fumante:</label><br>
+            <select id='sexo' name='fumante' disabled>
+                <option >Não</option>
+                <option selected>Sim</option>
+             </select>
+        </div>
+        <div>
+            <label for="municipioOrigem">Municipio de origen:</label><br>
+            <input type="text" id="municipio" disabled/>
+        </div>
+        <div>
+            <button type="button" id=limpar disabled>Limpar</button>
+        </div>
+    </fieldset>
+</body>
+</html>
