@@ -3,6 +3,7 @@ body{
     flex-direction: row;
     flex-wrap: non-wrap;
     justify-content: center;
+	font-family: Arial, Helvetica, sans-serif;
 }
 fieldset{
     
@@ -14,11 +15,14 @@ fieldset{
 label input{
     display: block;
 }
+input:focus{
+	background:cyan;
+}
 div{
     margin: 1px;
 }
-button{
-    padding: 10px;
+.botao{
+	padding: 10px;
     margin-top: 10px;
 }
 #cadastro #dados{

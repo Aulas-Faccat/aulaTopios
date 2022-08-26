@@ -1,8 +1,8 @@
 <html>
 <head>
     <title>Aula</title>
+	<script src="funcoes.js"></script> 
     <link rel="stylesheet" type="text/css" href="aula.css">
-    
     <meta charset="UTF-8">
 </head>
 <body>
@@ -15,7 +15,7 @@
             </div>
             <diV id=data>
                 <label>Data nascimento:</label><br>
-                <input type="date" id="dataNascimento" />
+                <input type="date" id="dataE" />
             </div>
         </div>
         <div>
@@ -36,7 +36,7 @@
         </div>
         <div>
             <label>Telefone Residencial:</label><br>
-            <input type="tel" id="telefoneResidencial" />
+            <input type="tel" id="telefone" />
         </div>
         <div>
             <label>Celular:</label><br>
@@ -44,7 +44,7 @@
         </div>
         <div>
             <label>Fumante:</label><br>
-            <select id='sexo' name='fumante'>
+            <select id='fumante' name='fumante'>
                 <option >Não</option>
                 <option selected>Sim</option>
              </select>
@@ -54,8 +54,8 @@
             <input type="text" id="municipio" />
         </div>
         <div>
-            <button type="button" id=cancelar>Cadastrar</button>
-            <button type="button">Cancelar</button>
+			<input type="button" onclick="limpaCadastro()" value="Cancelar" id=cancelar class=botao>  
+            <input type="button" onclick="cadastrar()" value="Cadastrar" class=botao>
         </div>
     </fieldset>
 
@@ -70,51 +70,51 @@
         
         <div id=nomedata>
             <div id=nome>
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nome" disabled/>
+                <label>Nome:</label><br>
+                <input type="text" id="nomeD" disabled/>
             </div>
             <diV id=data>
-                <label for="dataNascimento">Data nascimento:</label><br>
-                <input type="date" id="dataNascimento" disabled/>
+                <label>Data nascimento:</label><br>
+                <input type="date" id="dataD" disabled/>
             </div>
         </div>
         <div>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" disabled/>
+            <label >Email:</label><br>
+            <input type="email" id="emailD" disabled/>
         </div>
         <div>
-            <label for="senha">Senha:</label><br>
-            <input type="password" id="senha" disabled/>
+            <label >Senha:</label><br>
+            <input type="password" id="senhaD" disabled/>
         </div>
         <div>
-            <label for="sexo">Sexo:</label><br>
-            <select id='sexo' name='sexo' disabled>
+            <label>Sexo:</label><br>
+            <select id='sexoD' name='sexo' disabled>
                 <option>Outros</option>
                 <option >Feminino</option>
                 <option selected>Masculino</option>
              </select>
         </div>
         <div>
-            <label for="telefoneResidencial">Telefone Residencial:</label><br>
-            <input type="tel" id="telefoneResidencial" disabled/>
+            <label >Telefone Residencial:</label><br>
+            <input type="tel" id="telefoneD" disabled/>
         </div>
         <div>
-            <label for="celular">Celular:</label><br>
-            <input type="tel" id="celular" disabled/>
+            <label>Celular:</label><br>
+            <input type="tel" id="celularD" disabled/>
         </div>
         <div>
-            <label for="fumante">Fumante:</label><br>
-            <select id='sexo' name='fumante' disabled>
+            <label>Fumante:</label><br>
+            <select id='fumanteD' name='fumante' disabled>
                 <option >Não</option>
                 <option selected>Sim</option>
              </select>
         </div>
         <div>
-            <label for="municipioOrigem">Municipio de origen:</label><br>
-            <input type="text" id="municipio" disabled/>
+            <label>Municipio de origen:</label><br>
+            <input type="text" id="municipioD" disabled/>
         </div>
         <div>
-            <button type="button" id=limpar disabled>Limpar</button>
+			<input type="button" onclick="limpaDados()" value="Limpar" class=botao id=limpar>
         </div>
     </fieldset>
 </body>
