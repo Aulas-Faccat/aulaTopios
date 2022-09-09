@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>Aula</title>
+	<script src="funcoes.js"></script> 
+    <link rel="stylesheet" type="text/css" href="aula.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <fieldset id=cadastro>
+        <legend>Efetuar registro</legend>
+        <div id=nomedata>
+            <div>
+                <label>Nome:</label><br>
+                <input type="text" id="nome"/>
+            </div>
+            <diV id=data>
+                <label>Data nascimento:</label><br>
+                <input type="date" id="dataE" />
+            </div>
+        </div>
+        <div>
+            <label>Email:</label><br>
+            <input type="email" id="email"/>
+        </div>
+        <div>
+            <label>Senha:</label><br>
+            <input type="password" id="senha" />
+        </div>
+        <div>
+            <label>Sexo:</label><br>
+            <select id='sexo' name='sexo'>
+                <option>Outros</option>
+                <option >Feminino</option>
+                <option selected>Masculino</option>
+             </select>
+        </div>
+        <div>
+            <label>Telefone Residencial:</label><br>
+            <input type="tel" id="telefone" />
+        </div>
+        <div>
+            <label>Celular:</label><br>
+            <input type="tel" id="celular" />
+        </div>
+        <div>
+            <label>Fumante:</label><br>
+            <select id='fumante' name='fumante'>
+                <option >Não</option>
+                <option selected>Sim</option>
+             </select>
+        </div>
+        <div>
+            <label>Municipio de origen:</label><br>
+            <input type="text" id="municipio" />
+        </div>
+        <div>
+			<input type="button" onclick="limpaCadastro()" value="Cancelar" id=cancelar class=botao>  
+            <input type="button" onclick="cadastrar()" value="Cadastrar" class=botao>
+        </div>
+    </fieldset>
+
+
+
+
+
+
+
+    <fieldset id=dados>
+        <legend>Dados</legend>
+        
+        <div id=nomedata>
+            <div id=nome>
+                <label>Nome:</label><br>
+                <input type="text" id="nomeD" disabled/>
+            </div>
+            <diV id=data>
+                <label>Data nascimento:</label><br>
+                <input type="date" id="dataD" disabled/>
+            </div>
+        </div>
+        <div>
+            <label >Email:</label><br>
+            <input type="email" id="emailD" disabled/>
+        </div>
+        <div>
+            <label >Senha:</label><br>
+            <input type="password" id="senhaD" disabled/>
+        </div>
+        <div>
+            <label>Sexo:</label><br>
+            <select id='sexoD' name='sexo' disabled>
+                <option>Outros</option>
+                <option >Feminino</option>
+                <option selected>Masculino</option>
+             </select>
+        </div>
+        <div>
+            <label >Telefone Residencial:</label><br>
+            <input type="tel" id="telefoneD" disabled/>
+        </div>
+        <div>
+            <label>Celular:</label><br>
+            <input type="tel" id="celularD" disabled/>
+        </div>
+        <div>
+            <label>Fumante:</label><br>
+            <select id='fumanteD' name='fumante' disabled>
+                <option >Não</option>
+                <option selected>Sim</option>
+             </select>
+        </div>
+        <div>
+            <label>Municipio de origen:</label><br>
+            <input type="text" id="municipioD" disabled/>
+        </div>
+        <div>
+			<input type="button" onclick="limpaDados()" value="Limpar" class=botao id=limpar>
+        </div>
+    </fieldset>
+</body>
+</html>

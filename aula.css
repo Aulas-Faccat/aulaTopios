@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: non-wrap;
+    justify-content: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+fieldset{
+    
+    border: solid 1px;
+    max-height: 400px;
+    margin: 1px;
+    margin-top: 10%;
+}
+label input{
+    display: block;
+}
+input:focus{
+	background:cyan;
+}
+div{
+    margin: 1px;
+}
+.botao{
+	padding: 10px;
+    margin-top: 10px;
+}
+#cadastro #dados{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#nomedata{
+    display: flex;
+}
+#email, #nome{
+    width: 225px;
+}
+#data{
+    margin-left: 30px;
+}
+#municipio{
+    width: 300px;
+}
+#cancelar{
+    margin-left: 200px;
+}
+#limpar{
+    margin-left: 300px;
+}
