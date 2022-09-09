@@ -1,0 +1,195 @@
+<html>
+<head>
+    <title>Aula</title>
+    <script>
+        function limpaDados() {
+            document.getElementById('nomeD').value = '';
+            document.getElementById('senhaD').value = '';
+            document.getElementById('sexoD').value = 'Masculino';
+            document.getElementById('telefoneD').value = '';
+            document.getElementById('celularD').value = '';
+            document.getElementById('fumanteD').value = 'Sim';
+            document.getElementById('dataD').value = 'dd/mm/aaaa';
+            document.getElementById('municipioD').value = '';
+            document.getElementById('emailD').value = '';
+        }
+        function limpaCadastro() {
+            document.getElementById('nomeE').value = '';
+            document.getElementById('senhaE').value = '';
+            document.getElementById('sexoE').value = 'Masculino';
+            document.getElementById('telefoneE').value = '';
+            document.getElementById('celularE').value = '';
+            document.getElementById('fumanteE').value = 'Sim';
+            document.getElementById('dataE').value = 'dd/mm/aaaa';
+            document.getElementById('municipioE').value = '';
+            document.getElementById('emailE').value = '';
+        }
+    </script> 
+    <style>
+        body{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: non-wrap;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+        fieldset{
+            
+            border: solid 1px;
+            max-height: 400px;
+            margin: 1px;
+            margin-top: 10%;
+        }
+        label input{
+            display: block;
+        }
+        input:focus{
+            background:cyan;
+        }
+        div{
+            margin: 1px;
+        }
+        .botao{
+            padding: 10px;
+            margin-top: 10px;
+        }
+        #cadastro, #dados{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        #nomedata{
+            display: flex;
+        }
+        #emailE, #nomeE, #emailD, #nomeD{
+            width: 225px;
+        }
+        #dataE, #dataD{
+            margin-left: 30px;
+        }
+        #municipioE, #municipioD{
+            width: 300px;
+        }
+        #cancelar{
+            margin-left: 200px;
+        }
+        #limpar{
+            margin-left: 300px;
+        }
+    </style>
+    
+    <meta charset="UTF-8">
+</head>
+<body>
+    <fieldset id=cadastro>
+        <legend>Efetuar registro</legend>
+        <form action="/salvar" method="POST">
+            <div id=nomedata>
+                <div>
+                    <label>Nome:</label><br>
+                    <input type="text" id="nomeE" name="nomeE"/>
+                </div>
+                <diV id=data>
+                    <label>Data nascimento:</label><br>
+                    <input type="date" id="dataE" name="dataE"/>
+                </div>
+            </div>
+            <div>
+                <label>Email:</label><br>
+                <input type="email" id="emailE" name="emailE"/>
+            </div>
+            <div>
+                <label>Senha:</label><br>
+                <input type="password" id="senhaE" name="senhaE"/>
+            </div>
+            <div>
+                <label>Sexo:</label><br>
+                <select id='sexo' name='sexoE'>
+                    <option>Outros</option>
+                    <option >Feminino</option>
+                    <option selected>Masculino</option>
+                </select>
+            </div>
+            <div>
+                <label>Telefone Residencial:</label><br>
+                <input type="tel" id="telefoneE" name="telefoneE"/>
+            </div>
+            <div>
+                <label>Celular:</label><br>
+                <input type="tel" id="celularE" name="celularE"/>
+            </div>
+            <div>
+                <label>Fumante:</label><br>
+                <select id='fumante' name='fumanteE'>
+                    <option >Não</option>
+                    <option selected>Sim</option>
+                </select>
+            </div>
+            <div>
+                <label>Municipio de origen:</label><br>
+                <input type="text" id="municipioE" name="municipioE"/>
+            </div>
+            <div>
+                <input type="button" onclick="limpaCadastro()" value="Cancelar" id=cancelar class=botao>  
+                <input type="submit" value="Cadastrar" id="cadastrar" class=botao name="cancelar"/>
+            </div>
+        </form>
+    </fieldset>
+
+
+
+    <fieldset id=dados>
+        <legend>Dados</legend>
+        <form action="/salvar" method="POST">
+        <div id=nomedata>
+            <div id=nome>
+                <label>Nome:</label><br>
+                <input type="text" id="nomeD" name="nomeD" value="{{nomeD}}" disabled/>
+            </div>
+            <diV id=data>
+                <label>Data nascimento:</label><br>
+                <input type="date" id="dataD" name="dataD" value="{{dataD}}" disabled/>
+            </div>
+        </div>
+        <div>
+            <label >Email:</label><br>
+            <input type="email" id="emailD" name="emailD" value="{{emailD}}" disabled/>
+        </div>
+        <div>
+            <label >Senha:</label><br>
+            <input type="password" id="senhaD" name="senhaD" value="{{senhaD}}" disabled/>
+        </div>
+        <div>
+            <label>Sexo:</label><br>
+            <select id='sexoD' name='sexo' name="sexoD" value="{{sexcD}}" disabled>
+                <option>Outros</option>
+                <option >Feminino</option>
+                <option selected>Masculino</option>
+             </select>
+        </div>
+        <div>
+            <label >Telefone Residencial:</label><br>
+            <input type="tel" id="telefoneD" name="telefoneD" value="{{telefoneD}}" disabled/>
+        </div>
+        <div>
+            <label>Celular:</label><br>
+            <input type="tel" id="celularD" name="celularD" value="{{celularD}}" disabled/>
+        </div>
+        <div>
+            <label>Fumante:</label><br>
+            <select id='fumanteD' name='fumante' name="fumanteD" value="{{fumanteD}}" disabled>
+                <option >Não</option>
+                <option selected>Sim</option>
+             </select>
+        </div>
+        <div>
+            <label>Municipio de origen:</label><br>
+            <input type="text" id="municipioD" name="municipioD" value="{{municipioD}}" disabled/>
+        </div>
+        <div>
+			<input type="button" onclick="limpaDados()" value="Limpar" class=botao id=limpar>
+        </div>
+    </fieldset>
+</body>
+</html>
