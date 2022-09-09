@@ -16,7 +16,16 @@ app.get("/", function(req,res){
     
 });
 app.post("/salvar", function(req,res){
-
+    console.log(        "nome: ",req.body.nomeE,
+                        "Data: ",req.body.dataE,
+                        "Email: ",req.body.emailE,
+                        "Senha: ","*************",
+                        "Sexo: ",req.body.sexoE,
+                        "Telefone: ",req.body.telefoneE,
+                        "Celular: ",req.body.celularE,
+                        "Fumante: ",req.body.fumanteE,
+                        "Municipio: ",req.body.municipioE
+    )
     res.render('tarefa',{nomeD:req.body.nomeE,
                         dataD:req.body.dataE,
                         emailD:req.body.emailE,
